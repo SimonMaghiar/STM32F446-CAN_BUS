@@ -12,7 +12,7 @@ TxHeader.StdId = 0x600 | 8
 In order to understand TxHeader.StdId, you need to understand how CANopen mode works.
 Here's a link for more details: https://doc.ingeniamc.com/emcl2/command-reference-manual/communications/canopen-protocol
 
-![table.PNG]
+![images/table.PNG]
 
 The CAN1_TX and CAN1_RX is connected to a CAN tranceiver which in turn is connected to the driver.
 
