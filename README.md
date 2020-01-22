@@ -47,4 +47,4 @@ void move()
 
 The reason why the first data byte is 0x23 is because of the following :
 
-![](cs.PNG) 
+![](images/firstbyte.PNG) 
