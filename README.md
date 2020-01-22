@@ -20,7 +20,7 @@ In order to understand TxHeader.StdId, you need to understand how CANopen mode w
 The CAN1_TX and CAN1_RX is connected to a CAN tranceiver which in turn is connected to the driver.
 
 See the Logic analyzer screenshot for more information. 
-
+```c
 void move()
 {
 	CAN_TxHeaderTypeDef TxHeader;
@@ -39,3 +39,4 @@ void move()
 
 	while(HAL_CAN_IsTxMessagePending(&hcan1,TxMailBox));
 }
+```
