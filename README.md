@@ -6,7 +6,7 @@ The selected CAN Mode is : CANopen !
 Some notes: The Can_Id of RoboteQ is 0x08 , to read the voltage from the driver you have to send 0x210D.
 
 The frame that is sent is composend from the followings:
-TxHeader.DLC = 8; => Data length = 8 bytes
+TxHeader.DLC = 8 => Data length = 8 bytes
 TxHeader.StdId = 0x600 | 8 
 
 In order to understand TxHeader.StdId, you need to understand how CANopen mode works.
