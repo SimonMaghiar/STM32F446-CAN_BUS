@@ -20,6 +20,10 @@ In order to understand TxHeader.StdId, you need to understand how CANopen mode w
 The CAN1_TX and CAN1_RX is connected to a CAN tranceiver which in turn is connected to the driver.
 
 See the Logic analyzer screenshot for more information. 
+
+Move() function is not implemented in main.c. Its purpose is to send command to RoboteQ in order to rotate the motor in one direction
+with a particular speed(-1000)
+
 ```c
 void move()
 {
@@ -40,3 +44,7 @@ void move()
 	while(HAL_CAN_IsTxMessagePending(&hcan1,TxMailBox));
 }
 ```
+
+The reason why the first data byte is 0x23 is because of the following :
+
+![](cs.PNG)
