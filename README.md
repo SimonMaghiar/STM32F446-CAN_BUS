@@ -48,3 +48,25 @@ void move()
 The reason why the first data byte is 0x23 is because of the following :
 
 ![](images/firstbyte.PNG) 
+
+
+```c
+void read_voltage(void)
+{
+	CAN_TxHeaderTypeDef TxHeader;
+	uint32_t TxMailBox;
+	uint8_t our_message[8] = {0x40, 0x210D & 0xff, 0x210D>>8, 2, 0, 0, 0, 0};
+	TxHeader.DLC = 8;   	 	//length of transmission
+	TxHeader.StdId = 0x600 | 8;	//Standard id
+	TxHeader.IDE = CAN_ID_STD;
+	TxHeader.RTR = 	CAN_RTR_DATA;  //request data
+
+	if(HAL_CAN_AddTxMessage(&hcan1,&TxHeader,our_message,&TxMailBox) != HAL_OK)
+	{
+		Error_Handler();
+	}
+```
+
+In this case, we want to receive data from the RoboteQ. Note that the first byte of the message is 0x40 this time.
+
+[]!(images/firstbyte_read.PNG)
