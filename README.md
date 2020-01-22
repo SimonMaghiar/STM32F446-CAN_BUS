@@ -9,7 +9,7 @@ The frame that is sent is composend from the followings:
 
 TxHeader.DLC = 8 => Data length = 8 bytes
 
-TxHeader.StdId = 0x600 | 8 
+TxHeader.StdId = 0x600 | 8   (0x600 is the function code and 8 is the Node_ID of the RoboteQ)
 
 In order to understand TxHeader.StdId, you need to understand how CANopen mode works.
 
