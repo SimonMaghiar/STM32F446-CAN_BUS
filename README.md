@@ -69,4 +69,4 @@ void read_voltage(void)
 
 In this case, we want to receive data from the RoboteQ. Note that the first byte of the message is 0x40 this time.
 
-[]!(images/firstbyte_read.PNG)
+![](images/firstbyte_read.PNG)
