@@ -10,7 +10,8 @@ TxHeader.DLC = 8 => Data length = 8 bytes
 TxHeader.StdId = 0x600 | 8 
 
 In order to understand TxHeader.StdId, you need to understand how CANopen mode works.
-Here's a link for more details: https://doc.ingeniamc.com/emcl2/command-reference-manual/communications/canopen-protocol
+
+![](images/canframe.PNG)
 
 ![](images/table.PNG)
 
